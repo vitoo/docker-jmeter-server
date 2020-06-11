@@ -24,8 +24,8 @@ RUN    apk update \
 	&& curl -L --silent ${JMETER_DOWNLOAD_URL} >  /tmp/dependencies/apache-jmeter-${JMETER_VERSION}.tgz  \
 	&& mkdir -p /opt  \
 	&& tar -xzf /tmp/dependencies/apache-jmeter-${JMETER_VERSION}.tgz -C /opt  \
-	&& rm -rf /tmp/dependencies
-	&& cp /usr/share/zoneinfo/${TZ} /etc/localtime
+	&& rm -rf /tmp/dependencies \
+	&& cp /usr/share/zoneinfo/${TZ} /etc/localtime \
 	&& echo ${TZ} >/etc/timezone
 
 # TODO: plugins (later)
