@@ -37,8 +37,6 @@ ENV PATH $PATH:$JMETER_BIN
 # Entrypoint has same signature as "jmeter" command
 COPY entrypoint.sh /
 
-ADD rmi_keystore.jks /apache-jmeter-${JMETER_VERSION}/bin
-
 WORKDIR	${JMETER_HOME}
 
 ENTRYPOINT ["/entrypoint.sh"]
