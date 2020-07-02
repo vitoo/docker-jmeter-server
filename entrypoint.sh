@@ -16,7 +16,7 @@ echo "JVM_ARGS=${JVM_ARGS}"
 echo "jmeter args=$@"
 
 # Keep entrypoint simple: we must pass the standard JMeter arguments
-jmeter $@
+jmeter -s -Jserver.rmi.ssl.disable=true $@
 echo "END Running Jmeter on `date`"
 
 #     -n \
